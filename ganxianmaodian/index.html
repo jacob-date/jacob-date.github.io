@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="赣县茅店镇 - 提供赣县茅店镇最新政务动态、便民服务指南、乡镇概况、旅游景点及本地生活资讯，打造赣南地区乡镇便民综合服务平台。">
+    <meta name="keywords" content="赣县茅店镇, 茅店镇, 赣县乡镇, 茅店镇政务, 茅店镇生活, 赣县茅店">
+    <title>赣县茅店镇 - 茅店镇政务资讯与便民服务平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f39c12;
+            --text-color: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 12px;
+            padding: 8px 0;
+            text-align: center;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 8px;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        .nav-menu a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.6)), url('https://picsum.photos/seed/miaodian/1600/600') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Quick Nav */
+        .quick-nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-nav-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .quick-nav-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .quick-nav-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .quick-nav-item h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .quick-nav-item p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Main Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* News Section */
+        .section-title {
+            font-size: 22px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .news-list {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .news-item {
+            display: flex;
+            padding: 16px;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            background: var(--bg-light);
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-align: center;
+            margin-right: 16px;
+            min-width: 60px;
+        }
+
+        .news-date .day {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .news-date .month {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .news-info h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .news-info p {
+            font-size: 13px;
+            color: var(--text-light);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .widget h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .notice-list li {
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .notice-list li:last-child {
+            border-bottom: none;
+        }
+
+        .notice-list li span.tag {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* Banner Ad Placeholder */
+        .ad-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--bg-light);
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-main {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-menu {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero {
+                height: 300px;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .quick-nav {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-nav {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="container">
+                欢迎访问赣县茅店镇人民政府官方网站 | 官方权威信息发布平台
+            </div>
+        </div>
+        <div class="container header-main">
+            <a href="#" class="logo">
+                赣县茅店镇
+                <span>便民服务平台</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#">政务公开</a>
+                <a href="#">乡镇概况</a>
+                <a href="#">便民服务</a>
+                <a href="#">乡村振兴</a>
+                <a href="#">互动交流</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>赣县茅店镇</h1>
+                <p>位于赣州市区南大门，是赣南苏区振兴发展的前沿阵地。聚焦“产业兴旺、生态宜居、乡风文明、治理有效、生活富裕”，共建美好新茅店。</p>
+            </div>
+        </section>
+
+        <!-- Quick Nav -->
+        <div class="container">
+            <div class="quick-nav">
+                <div class="quick-nav-item">
+                    <div class="quick-nav-icon">🏢</div>
+                    <h3>政务大厅</h3>
+                    <p>一站式便民服务</p>
+                </div>
+                <div class="quick-nav-item">
+                    <div class="quick-nav-icon">📜</div>
+                    <h3>信息公开</h3>
+                    <p>政策文件与公告</p>
+                </div>
+                <div class="quick-nav-item">
+                    <div class="quick-nav-icon">🏘️</div>
+                    <h3>乡村振兴</h3>
+                    <p>产业发展与风貌提升</p>
+                </div>
+                <div class="quick-nav-item">
+                    <div class="quick-nav-icon">📞</div>
+                    <h3>便民电话</h3>
+                    <p>服务热线查询</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="container main-content">
+            <!-- Left Column: News -->
+            <section class="content-left">
+                <div class="section-title">
+                    <h2>最新动态</h2>
+                    <a href="#">查看更多 &gt;</a>
+                </div>
+                <div class="news-list">
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">茅店镇召开2023年秋季秸秆禁烧暨大气污染防治工作推进会</a></h3>
+                            <p>为切实改善辖区空气质量，保障人民群众身体健康，10月15日上午，茅店镇组织召开秋季秸秆禁烧暨大气污染防治工作推进会...</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">12</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">赣县茅店镇：开展“情暖重阳”走访慰问活动</a></h3>
+                            <p>金秋十月爽，九九话重阳。为弘扬中华民族尊老、敬老、爱老的传统美德，茅店镇组织志愿者队伍深入各村（社区）开展重阳节慰问活动...</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">08</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">茅店镇开展秋季森林防灭火应急演练</a></h3>
+                            <p>为进一步提升全镇应急救援队伍的实战能力和协同作战水平，确保森林资源安全，10月8日，茅店镇组织开展秋季森林防灭火应急演练...</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">01</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">赣县茅店镇：优化营商环境，服务企业促发展</a></h3>
+                            <p>茅店镇始终坚持“服务至上”理念，持续深化“放管服”改革，主动靠前服务，积极为企业排忧解难，助力辖区经济高质量发展...</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <!-- Notice Widget -->
+                <div class="widget">
+                    <h3>通知公告</h3>
+                    <ul class="notice-list">
+                        <li><a href="#">关于开展茅店镇2023年度城乡居民基本医疗保险缴费的通知 <span class="tag">政务</span></a></li>
+                        <li><a href="#">茅店镇关于进一步规范农村建房管理的公告 <span class="tag">规划</span></a></li>
+                        <li><a href="#">关于启用茅店镇便民服务中心新址的公告 <span class="tag">便民</span></a></li>
+                        <li><a href="#">关于做好2023年秋季动物防疫工作的通告 <span class="tag">农业</span></a></li>
+                        <li><a href="#">茅店镇人民政府关于禁止燃放烟花爆竹的通告 <span class="tag">安全</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Ad Placeholder -->
+                <div class="ad-placeholder">
+                    广告位：乡村振兴招商合作
+                </div>
+
+                <!-- Resources Widget -->
+                <div class="widget">
+                    <h3>办事指南</h3>
+                    <ul class="notice-list">
+                        <li><a href="#">城乡居民养老保险办理指南</a></li>
+                        <li><a href="#">居住证申领须知</a></li>
+                        <li><a href="#">农村宅基地审批流程</a></li>
+                        <li><a href="#">老年人优待证办理</a></li>
+                        <li><a href="#">社会救助申请流程</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <h2>走进茅店</h2>
+                    <p>赣县茅店镇位于赣州市区南大门，东邻赣县区湖江镇，南接赣县区茅店镇，西连赣县区吉埠镇，北接章贡区水东镇，是连接赣州城区与赣县区的交通要道。</p>
+                    <p>全镇总面积约46平方公里，下辖12个行政村和1个社区，总人口约3.8万人。茅店镇素有“赣南第一镇”的美誉，区位优势明显，交通十分便利，赣南大道、迎宾大道贯穿全境，京九铁路、赣龙铁路、大广高速、厦蓉高速及105国道穿境而过。</p>
+                    <p>近年来，茅店镇紧紧围绕“产业强镇、宜居美镇、和谐新镇”的发展目标，大力发展现代服务业、商贸物流业和生态农业，镇域经济综合实力显著增强，城乡面貌焕然一新。</p>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600; border-bottom: 2px solid var(--primary-color);">阅读更多乡镇概况 &rarr;</a>
+                </div>
+                <img src="https://picsum.photos/seed/miaodian2/600/400" alt="茅店镇乡村风貌" class="about-img">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于茅店</h4>
+                    <ul>
+                        <li><a href="#">政府概况</a></li>
+                        <li><a href="#">领导分工</a></li>
+                        <li><a href="#">机构设置</a></li>
+                        <li><a href="#">历史沿革</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>政务公开</h4>
+                    <ul>
+                        <li><a href="#">政策法规</a></li>
+                        <li><a href="#">财政信息</a></li>
+                        <li><a href="#">人事信息</a></li>
+                        <li><a href="#">规划计划</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>便民服务</h4>
+                    <ul>
+                        <li><a href="#">政务大厅</a></li>
+                        <li><a href="#">办事指南</a></li>
+                        <li><a href="#">网上办事</a></li>
+                        <li><a href="#">市长信箱</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>地址：赣州市赣县区茅店镇人民政府</li>
+                        <li>电话：0797-1234567</li>
+                        <li>邮箱：maodianzhen@163.com</li>
+                        <li>邮编：341000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 赣县茅店镇人民政府 版权所有 | 赣ICP备XXXXXXXX号-1</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
