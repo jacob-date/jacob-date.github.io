@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱情论坛 - 恋爱心理学、情感咨询与两性关系交流社区</title>
+    <meta name="description" content="爱情论坛是一个专注于两性情感交流的社区，提供恋爱心理学、情感咨询、分手挽回、婚姻经营等话题讨论，帮助用户解决情感困惑，分享恋爱经验。">
+    <meta name="keywords" content="爱情论坛, 情感咨询, 恋爱技巧, 两性关系, 情感社区, 恋爱心理学">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4d6d;
+            --primary-hover: #e0385a;
+            --secondary-color: #ff8fa3;
+            --bg-color: #fff0f3;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+            --border-color: #ffdde1;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(255, 77, 109, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: var(--spacing-lg) auto;
+            padding: 0 var(--spacing-md);
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: var(--spacing-lg);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .sidebar-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 8px;
+        }
+
+        .quick-nav li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        .quick-nav a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-sub);
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        .quick-nav a:hover {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        .hot-topic {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .topic-item {
+            font-size: 0.9rem;
+        }
+
+        .topic-title {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .topic-meta {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* Main Content */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            border-radius: var(--radius);
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 24px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box {
+            background: #fff;
+            border-radius: 30px;
+            padding: 6px;
+            display: inline-flex;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Topic Grid */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 18px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .topic-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.15);
+            border-color: var(--secondary-color);
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: #ffe3e6;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 16px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            border-top: 1px solid var(--bg-color);
+            padding-top: 12px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .user-avatar {
+            width: 24px;
+            height: 24px;
+            background: #ddd;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Columns Layout */
+        .columns {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .article-item {
+            background: var(--card-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .article-thumb {
+            width: 120px;
+            height: 90px;
+            background: #eee;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .article-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .article-content p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+        }
+
+        .article-meta {
+            font-size: 0.8rem;
+            color: #999;
+            display: flex;
+            gap: 16px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: #fff;
+            border-top: 1px solid var(--border-color);
+            margin-top: var(--spacing-lg);
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col a {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            .article-item {
+                flex-direction: column;
+            }
+
+            .article-thumb {
+                width: 100%;
+                height: 180px;
+            }
+
+            nav ul {
+                display: none;
+            }
+            
+            .header-actions .btn-outline {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            爱情论坛 <span>LoveTalk</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">情感咨询</a></li>
+                <li><a href="#">恋爱技巧</a></li>
+                <li><a href="#">婚姻家庭</a></li>
+                <li><a href="#">失恋专区</a></li>
+                <li><a href="#">情感电台</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="btn btn-outline">登录</button>
+            <button class="btn btn-primary">发布话题</button>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside>
+        <div class="sidebar-card">
+            <div class="sidebar-title">快速导航</div>
+            <ul class="quick-nav">
+                <li><a href="#">♥ 热门推荐</a></li>
+                <li><a href="#">♥ 最新回复</a></li>
+                <li><a href="#">♥ 恋爱指南</a></li>
+                <li><a href="#">♥ 婚姻经营</a></li>
+                <li><a href="#">♥ 心理测试</a></li>
+                <li><a href="#">♥ 情感树洞</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-card">
+            <div class="sidebar-title">热门话题</div>
+            <div class="hot-topic">
+                <div class="topic-item">
+                    <a href="#" class="topic-title">如何判断对方是否真心喜欢你？</a>
+                    <div class="topic-meta">3282 回复 · 1.2万 阅读</div>
+                </div>
+                <div class="topic-item">
+                    <a href="#" class="topic-title">异地恋维持感情的有效方法</a>
+                    <div class="topic-meta">2105 回复 · 8900 阅读</div>
+                </div>
+                <div class="topic-item">
+                    <a href="#" class="topic-title">原生家庭对恋爱观的影响</a>
+                    <div class="topic-meta">1890 回复 · 7600 阅读</div>
+                </div>
+                <div class="topic-item">
+                    <a href="#" class="topic-title">结婚前应该考虑哪些财务问题？</a>
+                    <div class="topic-meta">1560 回复 · 6200 阅读</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-card" style="background: linear-gradient(to right, #ff9a9e, #fecfef); color: #fff;">
+            <h3 style="margin-bottom: 10px;">加入会员</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 15px;">解锁专属情感导师一对一咨询，获取恋爱秘籍。</p>
+            <button class="btn" style="background: #fff; color: var(--primary-color); width: 100%;">立即查看</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>遇见对的人，从这里开始</h1>
+            <p>无论你是正在经历甜蜜恋爱，还是陷入情感困境，爱情论坛都是你倾诉与成长的温暖港湾。</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索情感话题、求助帖或恋爱技巧...">
+                <button>搜索</button>
+            </div>
+        </section>
+
+        <!-- Hot Topics Grid -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">热门讨论</h2>
+                <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">查看更多 ></a>
+            </div>
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <span class="card-tag">恋爱技巧</span>
+                    <h3 class="card-title">第一次约会应该聊什么话题才不冷场？</h3>
+                    <p class="card-excerpt">很多男生在第一次约会时都会感到紧张，不知道如何开启话题。这里分享几个实用的破冰技巧和话题建议，帮助你给对方留下好印象...</p>
+                    <div class="card-footer">
+                        <div class="user-info">
+                            <img src="https://picsum.photos/seed/u1/40/40" alt="Avatar" class="user-avatar">
+                            <span>恋爱达人小王</span>
+                        </div>
+                        <div class="stats">
+                            <span class="stat-item">💬 128</span>
+                            <span class="stat-item">❤️ 456</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <span class="card-tag">情感咨询</span>
+                    <h3 class="card-title">男朋友总是不回消息，是不是不爱我了？</h3>
+                    <p class="card-excerpt">面对冷暴力，很多女生都会陷入自我怀疑。其实不回消息的原因有很多，可能是工作忙、性格内向，也可能是感情出了问题...</p>
+                    <div class="card-footer">
+                        <div class="user-info">
+                            <img src="https://picsum.photos/seed/u2/40/40" alt="Avatar" class="user-avatar">
+                            <span>迷茫的小A</span>
+                        </div>
+                        <div class="stats">
+                            <span class="stat-item">💬 892</span>
+                            <span class="stat-item">❤️ 2301</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <span class="card-tag">婚姻家庭</span>
+                    <h3 class="card-title">婚后婆媳矛盾如何化解？过来人的经验</h3>
+                    <p class="card-excerpt">婆媳关系是千古难题，处理不好会直接影响夫妻感情。分享几个高情商的沟通技巧，教你如何在尊重长辈的同时维护自己的小家庭...</p>
+                    <div class="card-footer">
+                        <div class="user-info">
+                            <img src="https://picsum.photos/seed/u3/40/40" alt="Avatar" class="user-avatar">
+                            <span>幸福宝妈</span>
+                        </div>
+                        <div class="stats">
+                            <span class="stat-item">💬 567</span>
+                            <span class="stat-item">1200</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="topic-card">
+                    <span class="card-tag">失恋专区</span>
+                    <h3 class="card-title">分手后如何走出阴影？重建自我指南</h3>
+                    <p class="card-excerpt">失恋是痛苦的，但也是成长的契机。通过运动、社交和兴趣爱好转移注意力，用时间治愈一切。这里有一份详细的自我疗愈清单...</p>
+                    <div class="card-footer">
+                        <div class="user-info">
+                            <img src="https://picsum.photos/seed/u4/40/40" alt="Avatar" class="user-avatar">
+                            <span>治愈系</span>
+                        </div>
+                        <div class="stats">
+                            <span class="stat-item">💬 445</span>
+                            <span class="stat-item">890</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Content Columns -->
+        <div class="columns">
+            <div>
+                <div class="section-header">
+                    <h2 class="section-title">情感专栏</h2>
+                </div>
+                <div class="article-list">
+                    <article class="article-item">
+                        <img src="https://picsum.photos/seed/love1/200/150" alt="Article" class="article-thumb">
+                        <div class="article-content">
+                            <h3><a href="#">读懂男人心：男人说“没事”到底是什么意思？</a></h3>
+                            <p>当男人对你说“没事”的时候，往往并不是真的没事。这背后可能隐藏着他的疲惫、不满，或者是希望你主动关心他...</p>
+                            <div class="article-meta">
+                                <span>作者：情感观察员</span>
+                                <span>•</span>
+                                <span>2023-10-24</span>
+                                <span>•</span>
+                                <span class="stat-item">👁️ 12k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-item">
+                        <img src="https://picsum.photos/seed/love2/200/150" alt="Article" class="article-thumb">
+                        <div class="article-content">
+                            <h3><a href="#">高情商沟通：如何用三句话让伴侣更爱你？</a></h3>
+                            <p>很多时候我们不知道如何表达爱意，结果却适得其反。学会使用肯定的言辞、精心的时刻和接受礼物，是经营感情的必修课...</p>
+                            <div class="article-meta">
+                                <span>作者：恋爱导师Lily</span>
+                                <span>•</span>
+                                <span>2023-10-23</span>
+                                <span>•</span>
+                                <span class="stat-item">👁️ 9.8k</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-item">
+                        <img src="https://picsum.photos/seed/love3/200/150" alt="Article" class="article-thumb">
+                        <div class="article-content">
+                            <h3><a href="#">长期关系维护：如何保持恋爱的新鲜感？</a></h3>
+                            <p>激情总会褪去，如何在漫长的岁月中保持对彼此的兴趣？尝试一起尝试新鲜事物、保持独立空间、定期深度沟通...</p>
+                            <div class="article-meta">
+                                <span>作者：幸福研究所</span>
+                                <span>•</span>
+                                <span>2023-10-22</span>
+                                <span>•</span>
+                                <span class="stat-item">👁️ 8.5k</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <aside>
+                <div class="sidebar-card">
+                    <div class="sidebar-title">情感测试</div>
+                    <div style="text-align: center; padding: 10px 0;">
+                        <img src="https://picsum.photos/seed/test/200/150" alt="Test" style="border-radius: 8px; margin-bottom: 10px;">
+                        <p style="font-size: 0.95rem; margin-bottom: 12px;">你的恋爱风格是哪种类型？</p>
+                        <button class="btn btn-outline" style="width: 100%; font-size: 0.85rem;">开始测试</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="sidebar-title">热门标签</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" style="background: #fff0f3; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; color: var(--primary-color);">#异地恋</a>
+                        <a href="#" style="background: #fff0f3; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; color: var(--primary-color);">#挽回爱情</a>
+                        <a href="#" style="background: #fff0f3; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; color: var(--primary-color);">#备婚</a>
+                        <a href="#" style="background: #fff0f3; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; color: var(--primary-color);">#冷暴力</a>
+                        <a href="#" style="background: #fff0f3; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; color: var(--primary-color);">#渣男</a>
+                        <a href="#" style="background: #fff0f3; padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; color: var(--primary-color);">#高情商</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于爱情论坛</h4>
+            <p style="color: var(--text-sub); font-size: 0.9rem; line-height: 1.6;">
+                爱情论坛致力于为用户提供一个真实、温暖、专业的情感交流平台。我们相信，每一份感情都值得被认真对待。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h4>热门栏目</h4>
+            <ul>
+                <li><a href="#">情感咨询</a></li>
+                <li><a href="#">恋爱技巧</a></li>
+                <li><a href="#">婚姻经营</a></li>
+                <li><a href="#">失恋专区</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>帮助中心</h4>
+            <ul>
+                <li><a href="#">论坛规则</a></li>
+                <li><a href="#">用户协议</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">联系客服</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>关注我们</h4>
+            <div style="display: flex; gap: 10px;">
+                <div style="width: 32px; height: 32px; background: #eee; border-radius: 50%;"></div>
+                <div style="width: 32px; height: 32px; background: #eee; border-radius: 50%;"></div>
+                <div style="width: 32px; height: 32px; background: #eee; border-radius: 50%;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 爱情论坛 LoveTalk. All Rights Reserved. 
+    </div>
+</footer>
+
+</body>
+  </html>
