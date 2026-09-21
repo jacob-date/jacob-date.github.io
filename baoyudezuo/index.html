@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="鲍鱼做法大全 - 提供经典清蒸鲍鱼、红烧鲍鱼、鲍鱼炖鸡汤及蒜蓉粉丝蒸鲍鱼的详细步骤、食材搭配和烹饪技巧。">
+    <meta name="keywords" content="鲍鱼的做法,鲍鱼食谱,清蒸鲍鱼,红烧鲍鱼,鲍鱼做法大全">
+    <title>鲍鱼的做法-经典食谱与烹饪技巧大全</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c8a2c8;
+            --secondary-color: #8b4513;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --spacing-unit: 1.5rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbf7 0%, #f3e5f5 100%);
+            padding: 4rem var(--spacing-unit);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags span {
+            display: inline-block;
+            background: rgba(200, 162, 200, 0.2);
+            color: var(--secondary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0 5px 10px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Recipe Grid */
+        .recipe-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .recipe-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .read-more {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-color);
+        }
+
+        .tips-list li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .tips-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .ingredient-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ingredient-tag {
+            background: var(--bg-color);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            border: 1px solid #eee;
+        }
+
+        /* Featured Detail */
+        .featured-detail {
+            margin-top: 4rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .detail-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2rem;
+        }
+
+        .detail-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .steps {
+            counter-reset: step;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .step-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c2c2c;
+            color: #ccc;
+            padding: 3rem var(--spacing-unit);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            aside {
+                position: static;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .featured-detail {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>🐚</span> 鲍鱼食谱大全
+            </a>
+            <nav class="nav-links">
+                <a href="#featured">清蒸鲍鱼</a>
+                <a href="#soups">炖汤</a>
+                <a href="#stir-fry">爆炒</a>
+                <a href="#tips">烹饪技巧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>鲍鱼的做法大全</h1>
+            <p>从经典清蒸到浓郁红烧，探索鲍鱼最鲜美的烹饪方式。无论是家庭聚餐还是宴请宾客，这些食谱都能助您轻松做出高品质的鲍鱼佳肴。</p>
+            <div class="hero-tags">
+                <span>清蒸鲍鱼</span>
+                <span>蒜蓉粉丝蒸</span>
+                <span>红烧鲍鱼</span>
+                <span>鲍鱼炖鸡汤</span>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Content Area -->
+            <div class="recipe-content">
+                <section class="recipe-section" id="featured">
+                    <h2>经典做法推荐</h2>
+                    <div class="recipe-grid">
+                        <!-- Card 1 -->
+                        <article class="recipe-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/abalone1/400/300" alt="清蒸鲍鱼">
+                                <span class="card-tag">快手菜</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>清蒸鲍鱼</h3>
+                                <p>最大程度保留鲍鱼的鲜美原味，只需简单的葱姜蒸制，口感嫩滑。</p>
+                                <a href="#detail-1" class="read-more">查看做法 &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="recipe-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/abalone2/400/300" alt="蒜蓉粉丝蒸鲍鱼">
+                                <span class="card-tag">宴客首选</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>蒜蓉粉丝蒸鲍鱼</h3>
+                                <p>蒜香浓郁，粉丝吸饱了鲍鱼的汤汁，是一道色香味俱全的招牌菜。</p>
+                                <a href="#detail-2" class="read-more">查看做法 &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="recipe-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/abalone3/400/300" alt="红烧鲍鱼">
+                                <span class="card-tag">浓郁风味</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>红烧鲍鱼</h3>
+                                <p>酱汁浓郁，鲍鱼软糯入味，适合搭配米饭，是很多人喜爱的家常做法。</p>
+                                <a href="#detail-3" class="read-more">查看做法 &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="recipe-card">
+                            <div class="card-image">
+                                <img src="https://picsum.photos/seed/abalone4/400/300" alt="鲍鱼炖鸡汤">
+                                <span class="card-tag">滋补养生</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>鲍鱼炖鸡汤</h3>
+                                <p>汤色金黄，营养丰富，具有滋阴补阳、增强免疫力的功效。</p>
+                                <a href="#detail-4" class="read-more">查看做法 &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Detailed Recipe Section -->
+                <section class="featured-detail" id="detail-1">
+                    <div class="detail-header">
+                        <h2>清蒸鲍鱼</h2>
+                        <p class="detail-meta">难度：简单 | 时间：15分钟 | 人份：2-3人</p>
+                    </div>
+                    <div class="steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>处理鲍鱼</h4>
+                                <p>将鲍鱼放入开水中烫一下，用小刀取下肉，去掉黑色的内脏和嘴部，冲洗干净。保留鲍鱼壳洗净备用。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>摆盘腌制</h4>
+                                <p>将鲍鱼肉放回壳中，在肉上铺上姜丝。淋上蒸鱼豉油，撒上少许料酒去腥。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>蒸制</h4>
+                                <p>水开后上锅，大火蒸5-8分钟即可。出锅后撒上葱花，淋上热油激发出香味。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="featured-detail" id="detail-2">
+                    <div class="detail-header">
+                        <h2>蒜蓉粉丝蒸鲍鱼</h2>
+                        <p class="detail-meta">难度：中等 | 时间：20分钟 | 人份：4人</p>
+                    </div>
+                    <div class="steps">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>调制蒜蓉酱</h4>
+                                <p>将大蒜切末，一半用油炸至金黄，一半生用。混合后加入生抽、蚝油、盐、糖制成蒜蓉酱。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>铺底</h4>
+                                <p>泡软的粉丝铺在盘底，放上处理好的鲍鱼，均匀浇上蒜蓉酱。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>蒸煮出锅</h4>
+                                <p>大火蒸8分钟，出锅撒上红椒粒点缀，淋上热油，香气扑鼻。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3>💡 烹饪小贴士</h3>
+                    <ul class="tips-list">
+                        <li>购买活鲍鱼时，按压肉质应迅速回弹。</li>
+                        <li>蒸制时间不宜过长，否则肉质会变老。</li>
+                        <li>鲍鱼壳可放入水中煮沸消毒，反复使用。</li>
+                        <li>炖汤时建议最后10分钟再放入鲍鱼，保持口感。</li>
+                        <li>去除内脏时注意清洗黑色部分，避免腥味。</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>常用食材</h3>
+                    <div class="ingredient-list">
+                        <span class="ingredient-tag">蒸鱼豉油</span>
+                        <span class="ingredient-tag">粉丝</span>
+                        <span class="ingredient-tag">大葱</span>
+                        <span class="ingredient-tag">生姜</span>
+                        <span class="ingredient-tag">蒜蓉</span>
+                        <span class="ingredient-tag">料酒</span>
+                        <span class="ingredient-tag">枸杞</span>
+                        <span class="ingredient-tag">红枣</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>常见问题 (FAQ)</h3>
+                    <ul class="tips-list">
+                        <li><strong>鲍鱼怎么去腥？</strong> 用料酒和姜片腌制即可。</li>
+                        <li><strong>鲍鱼适合什么人群？</strong> 一般人群均可食用，老少皆宜。</li>
+                        <li><strong>鲍鱼壳有什么用？</strong> 可作为天然容器，也可制作工艺品。</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p>专注于分享家庭烹饪技巧，致力于让每一位烹饪爱好者都能轻松掌握美味佳肴的制作方法。</p>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">海鲜做法</a></li>
+                    <li><a href="#">肉类料理</a></li>
+                    <li><a href="#">素食菜谱</a></li>
+                    <li><a href="#">汤品大全</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>邮箱：contact@recipe-demo.com</li>
+                    <li>电话：400-123-4567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 鲍鱼食谱大全. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
