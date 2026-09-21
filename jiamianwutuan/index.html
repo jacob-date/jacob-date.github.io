@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="假面舞团 - 专业的沉浸式角色扮演活动策划平台，提供古风假面舞会、主题派对组织、面具租赁服务及专业摄影记录。">
+    <meta name="keywords" content="假面舞团, 假面舞会, 沉浸式派对, 角色扮演, 古风活动, 面具租赁, 策划公司">
+    <title>假面舞团-沉浸式角色扮演活动策划与组织平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d4af37; /* 金色 */
+            --bg-dark: #1a1a1a;
+            --bg-card: #2d2d2d;
+            --text-light: #f0f0f0;
+            --text-gray: #a0a0a0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '🎭';
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: var(--bg-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #f1c40f;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/maskball/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 0.6rem 2rem;
+            border-radius: 4px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-dark);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background-color: var(--bg-dark);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Activity Showcase */
+        .activities {
+            padding: 4rem 0;
+            background-color: #252525;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .activity-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .activity-info {
+            padding: 1.5rem;
+        }
+
+        .activity-tag {
+            display: inline-block;
+            background-color: rgba(212, 175, 55, 0.2);
+            color: var(--accent-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-info p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .activity-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+        }
+
+        /* Service List */
+        .services {
+            padding: 4rem 0;
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            display: flex;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .service-img {
+            width: 40%;
+            min-width: 250px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 2rem;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .service-content p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .service-link {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .service-link::after {
+            content: '→';
+            margin-left: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+            background-color: #252525;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            background-color: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #333;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 3rem 0;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--accent-color);
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--text-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav {
+                display: none; /* Simplified mobile nav for this demo */
+            }
+
+            .service-item {
+                flex-direction: column;
+            }
+
+            .service-img, .service-content {
+                width: 100%;
+            }
+
+            .service-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">假面舞团</a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#activities">精彩活动</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">预约策划</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>摘下面具，遇见未知的自己</h1>
+                <p>假面舞团致力于打造极致的沉浸式角色扮演体验。从古风雅集到现代主题派对，我们提供专业的策划、舞美、化妆与摄影服务。</p>
+                <div class="hero-buttons">
+                    <a href="#activities" class="cta-btn">探索活动</a>
+                    <a href="#services" class="btn-outline">了解服务</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择假面舞团</h2>
+                    <p>不仅仅是聚会，更是一场关于身份、故事与艺术的探索之旅</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎭</div>
+                        <h3>沉浸式剧情</h3>
+                        <p>我们提供原创或改编的剧本框架，让每一位参与者都能在游戏中获得真实的角色代入感。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>专业舞美妆造</h3>
+                        <p>由资深化妆师团队提供定制化面具与服饰设计，还原剧本时代感，确保视觉上的惊艳。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3>全程影像记录</h3>
+                        <p>配备专业摄影师与摄像师，捕捉舞会中的精彩瞬间与情绪流露，为您留下珍贵的回忆。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="activities">
+            <div class="container">
+                <div class="section-title">
+                    <h2>近期热门活动</h2>
+                    <p>加入我们的行列，体验不同风格的角色扮演魅力</p>
+                </div>
+                <div class="activity-grid">
+                    <article class="activity-card">
+                        <img src="https://picsum.photos/seed/venice/600/400" alt="威尼斯面具舞会" class="activity-img">
+                        <div class="activity-info">
+                            <span class="activity-tag">欧洲复古</span>
+                            <h3>威尼斯假面舞会</h3>
+                            <p>重现17世纪威尼斯的奢华与神秘，在音乐与香槟中寻找失落的贵族气息。</p>
+                            <div class="activity-meta">
+                                <span>📅 2023年12月15日</span>
+                                <span>📍 上海·外滩源</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="activity-card">
+                        <img src="https://picsum.photos/seed/cyberpunk/600/400" alt="赛博朋克夜" class="activity-img">
+                        <div class="activity-info">
+                            <span class="activity-tag">未来科幻</span>
+                            <h3>霓虹之夜·赛博朋克</h3>
+                            <p>打破次元壁，进入2077年的反乌托邦世界，体验科技与义肢的狂欢。</p>
+                            <div class="activity-meta">
+                                <span>📅 2024年01月20日</span>
+                                <span>📍 北京·798艺术区</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="activity-card">
+                        <img src="https://picsum.photos/seed/ancient/600/400" alt="大唐华章" class="activity-img">
+                        <div class="activity-info">
+                            <span class="activity-tag">东方古风</span>
+                            <h3>大唐华章·国风雅集</h3>
+                            <p>衣袂飘飘，广袖流仙。在盛唐的夜色中，共赏霓裳羽衣曲，体验古人的风雅。</p>
+                            <div class="activity-meta">
+                                <span>📅 2024年02月10日</span>
+                                <span>📍 苏州·园林实景</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>我们的服务项目</h2>
+                    <p>全方位支持，让您的派对从构想到落地</p>
+                </div>
+                <div class="service-list">
+                    <div class="service-item">
+                        <img src="https://picsum.photos/seed/planning/800/500" alt="活动策划服务" class="service-img">
+                        <div class="service-content">
+                            <h3>活动全案策划</h3>
+                            <p>根据您的预算、人数和主题偏好，量身定制活动流程、剧本大纲与舞美设计方案。包含场地筛选、嘉宾邀请及现场统筹。</p>
+                            <a href="#" class="service-link">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://picsum.photos/seed/makeup/800/500" alt="化妆造型服务" class="service-img">
+                        <div class="service-content">
+                            <h3>专业造型团队</h3>
+                            <p>提供从面部彩绘到全身服装的定制服务。我们的造型师精通不同风格，确保每位参与者都能完美契合角色设定。</p>
+                            <a href="#" class="service-link">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://picsum.photos/seed/photo/800/500" alt="摄影摄像服务" class="service-img">
+                        <div class="service-content">
+                            <h3>影像记录服务</h3>
+                            <p>现场配备专业摄影师与摄像师，使用单反相机与摇臂设备。后期提供精修写真与活动回顾视频。</p>
+                            <a href="#" class="service-link">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">活动需要自带服装吗？</div>
+                        <div class="faq-answer">
+                            <p>通常情况下，假面舞团提供全套的服装与面具租赁服务。如果您有特殊的个人服装需求，也可以提前与我们沟通，我们会尽量协助配合。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">活动适合没有经验的新人参加吗？</div>
+                        <div class="faq-answer">
+                            <p>非常适合。我们的活动流程设计注重包容性与引导性，会有工作人员协助大家快速融入角色，消除陌生感。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何报名参加？</div>
+                        <div class="faq-answer">
+                            <p>您可以通过页面底部的联系方式或直接点击“预约策划”按钮，填写报名表单。我们的客服会在24小时内与您联系确认。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>假面舞团</h4>
+                    <p style="color: #888; font-size: 0.9rem;">让每一次相聚都充满未知与惊喜，用面具构建一个真实的世界。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#activities">活动日历</a></li>
+                        <li><a href="#services">合作方案</a></li>
+                        <li><a href="#">商业租赁</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@maskball.com</li>
+                        <li>地址：上海市静安区南京西路1266号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 假面舞团 版权所有.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ手风琴效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
