@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩子平二人转 - 东北民间艺术经典传承。收录韩子平二人转代表剧目、表演风格、艺术特色及观看指南，展现传统东北文化的魅力。">
+    <meta name="keywords" content="韩子平,二人转,东北二人转,韩子平二人转,民间艺术,东北小品,东北曲艺">
+    <title>韩子平二人转 - 东北民间艺术经典剧目与表演风格鉴赏</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f; /* 东北红 */
+            --secondary-color: #fbc02d; /* 东北黄 */
+            --dark-color: #212121;
+            --light-bg: #f5f5f5;
+            --text-color: #333;
+            --text-light: #666;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--dark-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .cta-btn:hover {
+            background-color: #b71c1c;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: var(--dark-color);
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(211, 47, 47, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* Main Content */
+        main {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 24px;
+            padding-left: 12px;
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Repertoire Section */
+        .repertoire-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--dark-color);
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+        }
+
+        .play-btn {
+            color: var(--primary-color);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Style Analysis */
+        .style-section {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+        }
+
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .style-card {
+            background: #fff;
+            padding: 24px;
+            border-radius: var(--border-radius);
+        }
+
+        .style-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .style-num {
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        details {
+            background: #fff;
+            margin-bottom: 12px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 16px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            border-top: 1px solid #f0f0f0;
+            padding-top: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            
+            nav ul {
+                gap: 16px;
+                margin: 10px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .about-grid, .style-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .style-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span>🎭</span> 韩子平二人转
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#repertoire">经典剧目</a></li>
+                    <li><a href="#style">艺术特色</a></li>
+                    <li><a href="#about">艺人介绍</a></li>
+                    <li><a href="#faq">观看指南</a></li>
+                </ul>
+            </nav>
+            <a href="#repertoire" class="cta-btn">立即观看</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>韩子平二人转：东北民间艺术的瑰宝</h1>
+        <p>探索韩子平二人转的独特魅力，感受东北黑土地上的幽默与深情。这里有经典剧目、表演解析及文化传承。</p>
+        <div class="hero-tags">
+            <span class="tag">#东北二人转</span>
+            <span class="tag">#民间艺术</span>
+            <span class="tag">#韩子平风格</span>
+            <span class="tag">#幽默诙谐</span>
+            <span class="tag">#东北文化</span>
+        </div>
+    </section>
+
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">关于韩子平二人转</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>韩子平二人转是东北地区广为流传的一种民间曲艺形式，以“说、唱、扮、舞、绝”的综合表演著称。韩子平作为该流派的重要代表人物之一，其表演风格融合了传统与现代，既有浓郁的乡土气息，又不失高雅的艺术格调。</p>
+                    <p>二人转在东北文化中占据重要地位，它不仅是娱乐方式，更是记录东北人民生活状态、情感表达和价值观的重要载体。韩子平的表演往往通过生动的语言、夸张的肢体动作和独特的唱腔，将生活中的喜怒哀乐展现得淋漓尽致。</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎤</span>
+                        <div class="feature-title">唱腔优美</div>
+                        <div class="feature-desc">融合了东北民歌与说唱元素</div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💃</span>
+                        <div class="feature-title">舞姿灵动</div>
+                        <div class="feature-desc">手绢花与扇子舞配合默契</div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">😄</span>
+                        <div class="feature-title">幽默诙谐</div>
+                        <div class="feature-desc">语言包袱密集，寓教于乐</div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">❤️</span>
+                        <div class="feature-title">情感真挚</div>
+                        <div class="feature-desc">讲述百姓故事，打动人心</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Repertoire Section -->
+        <section id="repertoire">
+            <h2 class="section-title">经典代表剧目</h2>
+            <div class="repertoire-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">经典</span>
+                        <img src="https://picsum.photos/seed/hzt1/400/300" alt="韩子平二人转表演剧照">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">小拜年</h3>
+                        <p class="card-desc">讲述了春节期间邻里之间互相拜年、互赠礼物的喜庆故事，充满了浓郁的年味和人情味。</p>
+                        <div class="card-footer">
+                            <span>时长：15分钟</span>
+                            <a href="#" class="play-btn">▶ 播放</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">热门</span>
+                        <img src="https://picsum.photos/seed/hzt2/400/300" alt="韩子平二人转表演剧照">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">大观灯</h3>
+                        <p class="card-desc">传统二人转名段，通过模拟各种灯彩和人物，展现了演员高超的模仿能力和诙谐的表演技巧。</p>
+                        <div class="card-footer">
+                            <span>时长：20分钟</span>
+                            <a href="#" class="play-btn">▶ 播放</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">推荐</span>
+                        <img src="https://picsum.photos/seed/hzt3/400/300" alt="韩子平二人转表演剧照">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">回杯记</h3>
+                        <p class="card-desc">讲述了书生与小姐之间的爱情故事，唱腔婉转动听，情感细腻，是韩子平风格的典型体现。</p>
+                        <div class="card-footer">
+                            <span>时长：18分钟</span>
+                            <a href="#" class="play-btn">▶ 播放</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-image">
+                        <span class="card-badge">搞笑</span>
+                        <img src="https://picsum.photos/seed/hzt4/400/300" alt="韩子平二人转表演剧照">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">猪八戒背媳妇</h3>
+                        <p class="card-desc">以诙谐幽默的方式演绎了猪八戒背媳妇的桥段，动作夸张，包袱密集，深受观众喜爱。</p>
+                        <div class="card-footer">
+                            <span>时长：12分钟</span>
+                            <a href="#" class="play-btn">▶ 播放</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Style Analysis -->
+        <section id="style">
+            <h2 class="section-title">艺术风格解析</h2>
+            <div class="style-section">
+                <div class="style-grid">
+                    <div class="style-card">
+                        <div class="style-header">
+                            <span class="style-num">1</span>
+                            <h3>语言包袱</h3>
+                        </div>
+                        <p>韩子平二人转的语言风格辛辣直白，善用东北方言俚语，通过夸张的比喻和双关语制造笑点，使观众在欢笑中感受生活的真实。</p>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-header">
+                            <span class="style-num">2</span>
+                            <h3>肢体语言</h3>
+                        </div>
+                        <p>表演中大量的肢体动作（如大跳、下腰、扇花）不仅具有观赏性，更是表达角色情绪、推动剧情发展的重要手段。</p>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-header">
+                            <span class="style-num">3</span>
+                            <h3>唱腔韵味</h3>
+                        </div>
+                        <p>保留了传统“柳调”、“胡胡调”的精髓，同时结合现代审美进行改良，唱腔高亢嘹亮，富有穿透力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2 class="section-title">观看与欣赏指南</h2>
+            <div class="faq-container">
+                <details>
+                    <summary>韩子平二人转适合什么人群观看？</summary>
+                    <div class="faq-content">
+                        韩子平二人转具有广泛的受众基础。它既适合喜欢传统民间艺术、了解东北文化的中老年观众，也因其幽默诙谐的风格，深受年轻一代喜爱。无论您是想放松心情，还是想体验地道的东北民俗，都能从中获得乐趣。
+                    </div>
+                </details>
+                <details>
+                    <summary>如何欣赏二人转的“绝活”？</summary>
+                    <div class="faq-content">
+                        二人转的“绝活”主要体现在手绢花、扇子舞以及模仿动物和人物的绝技上。在观看时，您可以注意演员如何通过手腕的灵活转动控制手绢飞舞的轨迹，以及如何通过面部表情和肢体动作惟妙惟肖地模仿角色，这是二人转艺术的高级体现。
+                    </div>
+                </details>
+                <details>
+                    <summary>韩子平二人转与传统二人转有何不同？</summary>
+                    <div class="faq-content">
+                        韩子平在继承传统二人转“丑、旦”搭配的基础上，更加注重舞台表演的叙事性和现代感。他的表演在保留乡土气息的同时，增加了更多的戏剧冲突和人物深度，使得作品既有传统的“土味”，又有现代的“雅趣”。
+                    </div>
+                </details>
+                <details>
+                    <summary>在哪里可以观看正版韩子平二人转视频？</summary>
+                    <div class="faq-content">
+                        您可以通过各大正规视频平台搜索“韩子平二人转”相关关键词，或关注官方发布的演出录像和纪录片。支持正版内容有助于传承和保护民间艺术。
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="justify-content: center; margin-bottom: 10px;">
+                <span>🎭</span> 韩子平二人转
+            </div>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">友情链接</a>
+            </div>
+            <p class="copyright">Copyright © 2023 韩子平二人转文化展示平台. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
