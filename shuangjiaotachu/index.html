@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="双脚踏出幸福路 - 探索人生选择、职业规划与生活方式的实用指南。分享如何通过稳健的步伐、明确的目标和脚踏实地的行动，走出属于自己的幸福人生之路。">
+    <meta name="keywords" content="双脚踏出幸福路, 人生规划, 职业发展, 生活方式, 稳健前行, 幸福指南">
+    <title>双脚踏出幸福路 - 人生选择与稳健前行指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c5f2d;
+            --primary-light: #e8f5e9;
+            --accent-color: #d4a017;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: var(--radius);
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: #1e421f;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius);
+            box-shadow: 0 10px 20px rgba(44, 95, 45, 0.2);
+        }
+
+        /* Core Philosophy Section */
+        .philosophy {
+            background-color: var(--white);
+        }
+
+        .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: var(--radius);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            background: var(--white);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Roadmap Section */
+        .roadmap {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .roadmap .section-title h2 {
+            color: var(--white);
+        }
+
+        .roadmap .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: rgba(255,255,255,0.3);
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            border: 4px solid var(--accent-color);
+        }
+
+        .step-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .step-item p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Guide Section */
+        .guide {
+            background-color: var(--bg-light);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .guide-main h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .guide-list li {
+            background: var(--white);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .guide-list li strong {
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .sidebar {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            height: fit-content;
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 10px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .check-icon {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-gray);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .steps-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .steps-container::before {
+                display: none;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>◆</span> 双脚踏出幸福路
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#philosophy">核心理念</a></li>
+                    <li><a href="#roadmap">行动路径</a></li>
+                    <li><a href="#guide">实用指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#guide" class="cta-btn">开始规划</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>每一步，都算数</h1>
+                    <p>幸福不是终点，而是由无数个稳健的脚印铺就的旅程。在这里，我们探讨如何通过脚踏实地的行动，走出一条属于自己的幸福之路。</p>
+                    <a href="#roadmap" class="cta-btn" style="background-color: var(--accent-color);">探索路径</a>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a generic nature/road seed image -->
+                    <img src="https://picsum.photos/seed/roadpath/600/400" alt="脚踏实地的旅程示意图" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Philosophy -->
+        <section id="philosophy" class="section-padding philosophy">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>什么是“双脚踏出幸福路”？</h2>
+                    <p>这不仅仅是一句口号，更是一种关于选择、坚持与自我实现的生活哲学。</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">🚶</span>
+                        <h3>脚踏实地</h3>
+                        <p>拒绝空想，关注当下。幸福往往隐藏在每一次认真做事、每一个解决具体问题的瞬间。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🧭</span>
+                        <h3>明确方向</h3>
+                        <p>双脚必须迈出有意义的一步。了解自己的内心渴望，设定清晰且可达成的目标。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🤝</span>
+                        <h3>稳健前行</h3>
+                        <p>不急于求成，不盲目攀比。在风雨中保持平衡，在平淡中积累力量。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="section-padding roadmap">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>踏上幸福之路的三个阶段</h2>
+                    <p>从迷茫到坚定，从尝试到精通，这是一条循序渐进的成长曲线。</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>觉察与定位</h3>
+                        <p>静下心来思考：我真正想要的生活是什么样的？我的优势在哪里？</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>行动与试错</h3>
+                        <p>迈出第一步。不要害怕走弯路，每一次跌倒都是对幸福路途的探索。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>坚持与收获</h3>
+                        <p>保持步伐的节奏，持续深耕。当你回望时，会发现脚下的路已繁花似锦。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Guide -->
+        <section id="guide" class="section-padding guide">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>实用行动指南</h2>
+                    <p>如何将“双脚踏出幸福路”的理念转化为日常生活中的具体行动？</p>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-main">
+                        <h3>关键行动建议</h3>
+                        <ul class="guide-list">
+                            <li>
+                                <strong>建立微小习惯：</strong> 幸福不是一蹴而就的，而是由无数个微小的习惯堆叠而成。例如，每天阅读30分钟，每周运动三次。
+                            </li>
+                            <li>
+                                <strong>管理预期：</strong> 接受生活的不确定性。幸福往往产生于“计划之外”的惊喜，而非严丝合缝的计划。
+                            </li>
+                            <li>
+                                <strong>建立连接：</strong> 与家人朋友保持联系，建立稳固的社会支持系统，这是风雨中行走的安全网。
+                            </li>
+                            <li>
+                                <strong>持续学习：</strong> 无论是职业技能还是生活情趣，不断学习能让你在人生路上拥有更多选择权。
+                            </li>
+                        </ul>
+                    </div>
+                    <aside class="sidebar">
+                        <h3>行前检查清单</h3>
+                        <div class="checklist-item">
+                            <span class="check-icon">✓</span> 明确了短期和长期目标
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check-icon">✓</span> 整理了必要的行囊（知识储备）
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check-icon">✓</span> 设定了底线原则
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check-icon">✓</span> 保持开放的心态
+                        </div>
+                        <div class="checklist-item">
+                            <span class="check-icon">✓</span> 准备好面对挫折
+                        </div>
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="#" class="cta-btn" style="font-size: 0.9rem; padding: 8px 16px;">下载完整指南PDF</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding faq">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">如果我走错了方向怎么办？</div>
+                        <div class="faq-answer">这很正常。人生没有绝对的直线，调整方向本身就是一种前进。关键在于及时复盘，纠正偏差，然后继续迈步。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何判断自己是否走在正确的道路上？</div>
+                        <div class="faq-answer">当你感到内心的平静与充实，并且愿意为了未来付出努力时，通常说明你正在正确的轨道上。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">幸福路需要多长时间才能走完？</div>
+                        <div class="faq-answer">这是一条没有终点的路。幸福的本质在于当下的体验，而不是终点的到达。享受行走的每一步。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>致力于分享关于生活规划、个人成长与幸福哲学的实用内容，帮助更多人找到属于自己的节奏。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#philosophy">核心理念</a></li>
+                        <li><a href="#roadmap">行动路径</a></li>
+                        <li><a href="#guide">实用指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                        <li><a href="#">微博话题</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 双脚踏出幸福路 版权所有 | 愿你步履不停，幸福常伴</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
